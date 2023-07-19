@@ -1,6 +1,9 @@
 import React from 'react'
 
-function MovieCard({movie}) {
+function MovieCard({movie }) {
+  
+
+
   return (
    <>
      <div className='card' >
@@ -13,7 +16,7 @@ function MovieCard({movie}) {
                      <p><small>Release Date: {movie.release_date}</small></p>
                      <p><small>Rating: {movie.vote_average}</small></p>
                      <p className='card-decs'>{movie.overview}</p>
-
+                    
                    </div>
             </div>
    </>

@@ -9,8 +9,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(226, 222, 222);
-  color: #333;
+ 
+  background-image: linear-gradient( 179deg,  rgba(0,0,0,1) 9.2%, rgba(127,16,16,1) 103.9% );
 }
 
 p {
@@ -29,7 +29,7 @@ small {
 
 .title {
   font-size: 4.4rem;
-  text-align: center
+ 
 }
 
 .form {
@@ -52,7 +52,7 @@ small {
 }
 
 .button {
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(142, 138, 138, 0.75);
   color: white;
   padding: 1rem 2rem;
   border: 1px solid rgba(0,0,0,0.75);
@@ -63,7 +63,7 @@ small {
 }
 
 .button:hover {
-  background-color: rgba(0,0,0,0.85);
+  background-color: rgba(73, 71, 71, 0.85);
 }
 
 @media (min-width:786px){
@@ -76,7 +76,12 @@ small {
   .input {
       margin-bottom: 0;
   }
-}.card-list{
+  .main-header{
+    height: 24rem;
+  }
+}
+
+.card-list{
   margin-top: 4rem;
 }
 
@@ -96,3 +101,4 @@ small {
   margin:0 auto;
   display: block;
 }
+
