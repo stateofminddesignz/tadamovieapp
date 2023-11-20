@@ -28,7 +28,7 @@ small {
 }
 
 .title {
-  font-size: 4.4rem;
+  font-size: 6.4rem;
  
 }
 
@@ -101,4 +101,22 @@ small {
   margin:0 auto;
   display: block;
 }
+nav {
+  font-size:24px;
+  
+  background-color: red; /* Temporary styling for testing visibility */
+}
 
+.nav-button {
+  padding: 10px 15px;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-left:10px;
+}
+
+.nav-button:hover {
+  background-color: darkblue;
+}
