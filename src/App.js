@@ -7,8 +7,8 @@ import './App.css';
 
 function App() {
     const [watchlist, setWatchlist] = useState(() => {
-        const savedWatchlist = localStorage.getItem('watchlist');
-        return savedWatchlist ? JSON.parse(savedWatchlist) : [];
+        const saved = localStorage.getItem('watchlist');
+        return saved ? JSON.parse(saved) : [];
     });
 
     useEffect(() => {
@@ -16,7 +16,7 @@ function App() {
     }, [watchlist]);
 
     const addToWatchlist = (movie) => {
-        if (!watchlist.some(watchlistMovie => watchlistMovie.id === movie.id)) {
+        if (!watchlist.some(m => m.id === movie.id)) {
             setWatchlist([...watchlist, movie]);
         }
     };
@@ -28,15 +28,13 @@ function App() {
     return (
         <Router>
             <Header />
-            <nav className='text-white'>
-                <Link className='ml-6' to="/">Search Movies</Link> | <Link to="/watchlist">Watchlist</Link>
+            <nav>
+                <Link to="/">Search Movies/TV Shows</Link> | <Link to="/watchlist">Watchlist</Link>
             </nav>
-            <div className="container">
-                <Switch>
-                    <Route exact path="/" render={() => <SearchMovies addToWatchlist={addToWatchlist} />} />
-                    <Route path="/watchlist" render={() => <Watchlist watchlist={watchlist} removeFromWatchlist={removeFromWatchlist} />} />
-                </Switch>
-            </div>
+            <Switch>
+                <Route exact path="/" render={() => <SearchMovies addToWatchlist={addToWatchlist} />} />
+                <Route path="/watchlist" render={() => <Watchlist watchlist={watchlist} removeFromWatchlist={removeFromWatchlist} />} />
+            </Switch>
         </Router>
     );
 }
