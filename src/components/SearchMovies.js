@@ -88,10 +88,10 @@ const SearchMovies = ({ addToWatchlist }) => {
                 <button className='mr-5' onClick={() => setSearchType('movies')}>Movies</button>
                 <button onClick={() => setSearchType('tv')}>TV Shows</button>
             </div>
-            <div className='text-white text-center text-4xl'>
-                <button className='mr-5' onClick={() => fetchCategoryMovies('newReleases')}>New Releases |</button>
-                <button className='mr-5' onClick={() => fetchCategoryMovies('popular')}>Popular |</button>
-                <button onClick={() => fetchCategoryMovies('comingSoon')}>Coming Soon</button>
+            <div className='text-white text-center text-4xl mt-6'>
+                <button className='mr-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => fetchCategoryMovies('newReleases')}>New Releases</button>
+                <button className='mr-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => fetchCategoryMovies('popular')}>Popular</button>
+                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => fetchCategoryMovies('comingSoon')}>Coming Soon</button>
             </div>
             {isLoading && <div>Loading...</div>}
             {error && <div>{error}</div>}

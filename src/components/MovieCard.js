@@ -14,9 +14,9 @@ function MovieCard({ movie, addToWatchlist, removeFromWatchlist, isInWatchlist }
               <p className='card--desc'>{movie.overview}</p>
 
               {isInWatchlist ? (
-                  <button onClick={() => removeFromWatchlist(movie.id)}>Remove from Watchlist</button>
+                  <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline button-click-effect" onClick={() => removeFromWatchlist(movie.id)}>Remove from Watchlist</button>
               ) : (
-                  <button onClick={() => addToWatchlist(movie)}>Add to Watchlist</button>
+                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline button-click-effect" onClick={() => addToWatchlist(movie)}>Add to Watchlist</button>
               )}
           </div>
       </div>
